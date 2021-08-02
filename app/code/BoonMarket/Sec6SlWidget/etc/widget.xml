@@ -1,0 +1,72 @@
+<?xml version="1.0" ?>
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget.xsd">
+    <widget class="BoonMarket\Sec6SlWidget\Block\Widget\Sec6SlBlock" id="boonmarketsec6">
+        <label>Slider section 6</label>
+        <description>Fields</description>
+        <parameters>
+            <parameter name="f_sl_image" xsi:type="block" required="false" visible="true" sort_order="10">
+                <label translate="true">First slide Image</label>
+                <description translate="true">Choose poster image</description>
+                <block class="BoonMarket\WhatFreshWidget\Block\Adminhtml\Widget\ImageChooser">
+                    <data>
+                        <item name="button" xsi:type="array">
+                            <item name="open" xsi:type="string">Choose Image...</item>
+                        </item>
+                    </data>
+                </block>
+            </parameter>
+            <parameter name="f_sl_title" sort_order="10" visible="true" xsi:type="text">
+                <label>First slide title</label>
+            </parameter>
+            <parameter name="f_sl_description" sort_order="10" visible="true" xsi:type="text">
+                <label>First slide description</label>
+            </parameter>
+            <parameter name="f_sl_read_more" sort_order="10" visible="true" xsi:type="text">
+                <label>First slide read more</label>
+            </parameter>
+
+            <parameter name="s_sl_image" xsi:type="block" required="false" visible="true" sort_order="10">
+                <label translate="true">Second slide Image</label>
+                <description translate="true">Choose poster image</description>
+                <block class="BoonMarket\WhatFreshWidget\Block\Adminhtml\Widget\ImageChooser">
+                    <data>
+                        <item name="button" xsi:type="array">
+                            <item name="open" xsi:type="string">Choose Image...</item>
+                        </item>
+                    </data>
+                </block>
+            </parameter>
+            <parameter name="s_sl_title" sort_order="10" visible="true" xsi:type="text">
+                <label>Second slide title</label>
+            </parameter>
+            <parameter name="s_sl_description" sort_order="10" visible="true" xsi:type="text">
+                <label>Second slide description</label>
+            </parameter>
+            <parameter name="s_sl_read_more" sort_order="10" visible="true" xsi:type="text">
+                <label>Second slide read more</label>
+            </parameter>
+
+            <parameter name="t_sl_image" xsi:type="block" required="false" visible="true" sort_order="10">
+                <label translate="true">Third slide Image</label>
+                <description translate="true">Choose poster image</description>
+                <block class="BoonMarket\WhatFreshWidget\Block\Adminhtml\Widget\ImageChooser">
+                    <data>
+                        <item name="button" xsi:type="array">
+                            <item name="open" xsi:type="string">Choose Image...</item>
+                        </item>
+                    </data>
+                </block>
+            </parameter>
+            <parameter name="t_sl_title" sort_order="10" visible="true" xsi:type="text">
+                <label>Third slide title</label>
+            </parameter>
+            <parameter name="t_sl_description" sort_order="10" visible="true" xsi:type="text">
+                <label>Third slide description</label>
+            </parameter>
+            <parameter name="t_sl_read_more" sort_order="10" visible="true" xsi:type="text">
+                <label>Third slide read more</label>
+            </parameter>
+        </parameters>
+    </widget>
+</widgets>

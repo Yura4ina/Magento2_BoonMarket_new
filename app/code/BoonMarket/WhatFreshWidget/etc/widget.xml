@@ -1,0 +1,82 @@
+<?xml version="1.0" ?>
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget.xsd">
+    <widget class="BoonMarket\WhatFreshWidget\Block\Widget\WhatFreshBlock" id="boonmarketsec5">
+        <label>What Fresh section</label>
+        <description>Fields</description>
+        <parameters>
+            <parameter name="sec_title" sort_order="10" visible="true" xsi:type="text">
+                <label>Section title</label>
+            </parameter>
+            <parameter name="big_image_f" xsi:type="block" required="false" visible="true" sort_order="10">
+                <label translate="true">First Image</label>
+                <description translate="true">Choose poster image</description>
+                <block class="BoonMarket\WhatFreshWidget\Block\Adminhtml\Widget\ImageChooser">
+                    <data>
+                        <item name="button" xsi:type="array">
+                            <item name="open" xsi:type="string">Choose Image...</item>
+                        </item>
+                    </data>
+                </block>
+            </parameter>
+            <parameter name="tag_text_f" sort_order="10" visible="true" xsi:type="text">
+                <label>First Tag text</label>
+            </parameter>
+            <parameter name="rg_title_f" sort_order="10" visible="true" xsi:type="text">
+                <label>First Title</label>
+            </parameter>
+            <parameter name="description_f" sort_order="10" visible="true" xsi:type="text">
+                <label>First Description</label>
+            </parameter>
+            <parameter name="shop_now_text_f" sort_order="10" visible="true" xsi:type="text">
+                <label>First Shop now text</label>
+            </parameter>
+            <parameter name="big_image_s" xsi:type="block" required="false" visible="true" sort_order="10">
+                <label translate="true">Second Image</label>
+                <description translate="true">Choose poster image</description>
+                <block class="BoonMarket\WhatFreshWidget\Block\Adminhtml\Widget\ImageChooser">
+                    <data>
+                        <item name="button" xsi:type="array">
+                            <item name="open" xsi:type="string">Choose Image...</item>
+                        </item>
+                    </data>
+                </block>
+            </parameter>
+            <parameter name="tag_text_s" sort_order="10" visible="true" xsi:type="text">
+                <label>Second Tag text</label>
+            </parameter>
+            <parameter name="rg_title_s" sort_order="10" visible="true" xsi:type="text">
+                <label>Second Title</label>
+            </parameter>
+            <parameter name="description_s" sort_order="10" visible="true" xsi:type="text">
+                <label>Second Description</label>
+            </parameter>
+            <parameter name="shop_now_text_s" sort_order="10" visible="true" xsi:type="text">
+                <label>Second Shop now text</label>
+            </parameter>
+            <parameter name="big_image_t" xsi:type="block" required="false" visible="true" sort_order="10">
+                <label translate="true">Third Image</label>
+                <description translate="true">Choose poster image</description>
+                <block class="BoonMarket\WhatFreshWidget\Block\Adminhtml\Widget\ImageChooser">
+                    <data>
+                        <item name="button" xsi:type="array">
+                            <item name="open" xsi:type="string">Choose Image...</item>
+                        </item>
+                    </data>
+                </block>
+            </parameter>
+            <parameter name="tag_text_t" sort_order="10" visible="true" xsi:type="text">
+                <label>Third Tag text</label>
+            </parameter>
+            <parameter name="rg_title_t" sort_order="10" visible="true" xsi:type="text">
+                <label>Third Title</label>
+            </parameter>
+            <parameter name="description_t" sort_order="10" visible="true" xsi:type="text">
+                <label>Third Description</label>
+            </parameter>
+            <parameter name="shop_now_text_t" sort_order="10" visible="true" xsi:type="text">
+                <label>Third Shop now text</label>
+            </parameter>
+        </parameters>
+    </widget>
+</widgets>

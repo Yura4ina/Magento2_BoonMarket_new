@@ -1,0 +1,68 @@
+<?xml version="1.0" ?>
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget.xsd">
+    <widget class="BoonMarket\HowWeWorkWidget\Block\Widget\HowWeWorkBlock" id="boonmarketsec3">
+        <label>How we work section</label>
+        <description>Fields</description>
+        <parameters>
+            <parameter name="sm_title" sort_order="10" visible="true" xsi:type="text">
+                <label>Small title</label>
+            </parameter>
+            <parameter name="rg_title" sort_order="10" visible="true" xsi:type="text">
+                <label>Regular title</label>
+            </parameter>
+            <parameter name="item_f_image" xsi:type="block" required="false" visible="true" sort_order="10">
+                <label translate="true">Item1 Image</label>
+                <description translate="true">Path will be correct after saving</description>
+                <block class="BoonMarket\HowWeWorkWidget\Block\Adminhtml\Widget\ImageChooser">
+                    <data>
+                        <item name="button" xsi:type="array">
+                            <item name="open" xsi:type="string">Choose Image...</item>
+                        </item>
+                    </data>
+                </block>
+            </parameter>
+            <parameter name="item_f_title" sort_order="10" visible="true" xsi:type="text">
+                <label>Item1 Title</label>
+            </parameter>
+            <parameter name="item_f_description" sort_order="10" visible="true" xsi:type="text">
+                <label>Item1 description</label>
+            </parameter>
+            <parameter name="item_s_image" xsi:type="block" required="false" visible="true" sort_order="10">
+                <label translate="true">Item2 Image</label>
+                <description translate="true">Path will be correct after saving</description>
+                <block class="BoonMarket\HowWeWorkWidget\Block\Adminhtml\Widget\ImageChooser">
+                    <data>
+                        <item name="button" xsi:type="array">
+                            <item name="open" xsi:type="string">Choose Image...</item>
+                        </item>
+                    </data>
+                </block>
+            </parameter>
+            <parameter name="item_s_title" sort_order="10" visible="true" xsi:type="text">
+                <label>Item2 Title</label>
+            </parameter>
+            <parameter name="item_s_description" sort_order="10" visible="true" xsi:type="text">
+                <label>Item2 description</label>
+            </parameter>
+
+            <parameter name="item_t_image" xsi:type="block" required="false" visible="true" sort_order="10">
+                <label translate="true">Item3 Image</label>
+                <description translate="true">Path will be correct after saving</description>
+                <block class="BoonMarket\HowWeWorkWidget\Block\Adminhtml\Widget\ImageChooser">
+                    <data>
+                        <item name="button" xsi:type="array">
+                            <item name="open" xsi:type="string">Choose Image...</item>
+                        </item>
+                    </data>
+                </block>
+            </parameter>
+            <parameter name="item_t_title" sort_order="10" visible="true" xsi:type="text">
+                <label>Item3 Title</label>
+            </parameter>
+            <parameter name="item_t_description" sort_order="10" visible="true" xsi:type="text">
+                <label>Item3 description</label>
+            </parameter>
+        </parameters>
+    </widget>
+</widgets>

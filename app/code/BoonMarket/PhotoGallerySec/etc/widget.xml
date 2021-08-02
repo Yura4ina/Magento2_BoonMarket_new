@@ -1,0 +1,123 @@
+<?xml version="1.0" ?>
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget.xsd">
+    <widget class="BoonMarket\PhotoGallerySec\Block\Widget\PhotoGallerySecBlock" id="boonmarketsec7">
+        <label>BoonMarket gallery</label>
+        <description>Fields</description>
+        <parameters>
+            <parameter name="sec_title" sort_order="10" visible="true" xsi:type="text">
+                <label>Section title</label>
+            </parameter>
+            <parameter name="gall_image_1" xsi:type="block" required="false" visible="true" sort_order="10">
+                <label translate="true">Image 1</label>
+                <description translate="true">Choose poster image</description>
+                <block class="BoonMarket\PhotoGallerySec\Block\Adminhtml\Widget\ImageChooser">
+                    <data>
+                        <item name="button" xsi:type="array">
+                            <item name="open" xsi:type="string">Choose Image...</item>
+                        </item>
+                    </data>
+                </block>
+            </parameter>
+            <parameter name="gall_image_2" xsi:type="block" required="false" visible="true" sort_order="10">
+                <label translate="true">Image 2</label>
+                <description translate="true">Choose poster image</description>
+                <block class="BoonMarket\PhotoGallerySec\Block\Adminhtml\Widget\ImageChooser">
+                    <data>
+                        <item name="button" xsi:type="array">
+                            <item name="open" xsi:type="string">Choose Image...</item>
+                        </item>
+                    </data>
+                </block>
+            </parameter>
+            <parameter name="gall_image_3" xsi:type="block" required="false" visible="true" sort_order="10">
+                <label translate="true">Image 3</label>
+                <description translate="true">Choose poster image</description>
+                <block class="BoonMarket\PhotoGallerySec\Block\Adminhtml\Widget\ImageChooser">
+                    <data>
+                        <item name="button" xsi:type="array">
+                            <item name="open" xsi:type="string">Choose Image...</item>
+                        </item>
+                    </data>
+                </block>
+            </parameter>
+            <parameter name="gall_image_4" xsi:type="block" required="false" visible="true" sort_order="10">
+                <label translate="true">Image 4</label>
+                <description translate="true">Choose poster image</description>
+                <block class="BoonMarket\PhotoGallerySec\Block\Adminhtml\Widget\ImageChooser">
+                    <data>
+                        <item name="button" xsi:type="array">
+                            <item name="open" xsi:type="string">Choose Image...</item>
+                        </item>
+                    </data>
+                </block>
+            </parameter>
+            <parameter name="gall_image_5" xsi:type="block" required="false" visible="true" sort_order="10">
+                <label translate="true">Image 5</label>
+                <description translate="true">Choose poster image</description>
+                <block class="BoonMarket\PhotoGallerySec\Block\Adminhtml\Widget\ImageChooser">
+                    <data>
+                        <item name="button" xsi:type="array">
+                            <item name="open" xsi:type="string">Choose Image...</item>
+                        </item>
+                    </data>
+                </block>
+            </parameter>
+            <parameter name="gall_image_6" xsi:type="block" required="false" visible="true" sort_order="10">
+                <label translate="true">Image 6</label>
+                <description translate="true">Choose poster image</description>
+                <block class="BoonMarket\PhotoGallerySec\Block\Adminhtml\Widget\ImageChooser">
+                    <data>
+                        <item name="button" xsi:type="array">
+                            <item name="open" xsi:type="string">Choose Image...</item>
+                        </item>
+                    </data>
+                </block>
+            </parameter>
+            <parameter name="gall_image_7" xsi:type="block" required="false" visible="true" sort_order="10">
+                <label translate="true">Image 7</label>
+                <description translate="true">Choose poster image</description>
+                <block class="BoonMarket\PhotoGallerySec\Block\Adminhtml\Widget\ImageChooser">
+                    <data>
+                        <item name="button" xsi:type="array">
+                            <item name="open" xsi:type="string">Choose Image...</item>
+                        </item>
+                    </data>
+                </block>
+            </parameter>
+            <parameter name="gall_image_8" xsi:type="block" required="false" visible="true" sort_order="10">
+                <label translate="true">Image 8</label>
+                <description translate="true">Choose poster image</description>
+                <block class="BoonMarket\PhotoGallerySec\Block\Adminhtml\Widget\ImageChooser">
+                    <data>
+                        <item name="button" xsi:type="array">
+                            <item name="open" xsi:type="string">Choose Image...</item>
+                        </item>
+                    </data>
+                </block>
+            </parameter>
+            <parameter name="gall_image_9" xsi:type="block" required="false" visible="true" sort_order="10">
+                <label translate="true">Image 9</label>
+                <description translate="true">Choose poster image</description>
+                <block class="BoonMarket\PhotoGallerySec\Block\Adminhtml\Widget\ImageChooser">
+                    <data>
+                        <item name="button" xsi:type="array">
+                            <item name="open" xsi:type="string">Choose Image...</item>
+                        </item>
+                    </data>
+                </block>
+            </parameter>
+            <parameter name="gall_image_10" xsi:type="block" required="false" visible="true" sort_order="10">
+                <label translate="true">Image 10</label>
+                <description translate="true">Choose poster image</description>
+                <block class="BoonMarket\PhotoGallerySec\Block\Adminhtml\Widget\ImageChooser">
+                    <data>
+                        <item name="button" xsi:type="array">
+                            <item name="open" xsi:type="string">Choose Image...</item>
+                        </item>
+                    </data>
+                </block>
+            </parameter>
+        </parameters>
+    </widget>
+</widgets>

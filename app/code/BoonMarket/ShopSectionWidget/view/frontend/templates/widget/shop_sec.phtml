@@ -1,0 +1,117 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+use Magento\Framework\App\Action\Action;
+
+?>
+<?php
+/**
+ * @var $block BoonMarket\ShopSectionWidget\Block\Widget\ShopSectionWidget
+ * @var Magento\Framework\Escaper $escaper
+ */
+?>
+
+<section class="section4" id="shop">
+    <h2><?= $block->getSecTitle() ?></h2>
+    <div class="section4__categories">
+        <?php $isCurr = 0; ?>
+        <?php $categories =  $block->getChildrenCategories(10); ?>
+        <?php foreach ($categories as $subcat): ?>
+           <div class="section4__categories__cat <?php echo ($isCurr == 0 ? 'current' : ''); $isCurr++; ?>" data-catId="<?= $subcat->getId() ?>">
+               <div class="section4__categories__cat__ico">
+                   <img src="<?= $block->getSubCategoryImage($subcat->getId()) ?>" alt="">
+               </div>
+               <div class="section4__categories__cat__title"> <?= $subcat->getName() ?> </div>
+           </div>
+        <?php endforeach; ?>
+    </div>
+
+    <?php foreach ($categories as $subcat): ?>
+        <div class="section4__products swiper-container <?= 'prCat_' . $subcat->getId() ?> <?= $subcat->getId() == $categories->getFirstItem()->getId() ? 'active' : ''?>">
+            <div class="swiper-wrapper">
+                <?php
+                $products = $block->getProductCollectionByCategories($subcat->getId());
+                foreach ($products as $product):
+                    ?>
+                    <div class="section4__products__product swiper-slide">
+                        <a href="<?= $product->getProductUrl(); ?>">
+                            <div class="section4__products__product__image">
+                                <img loading="lazy" src="<?= $block->getProductImageUrl($product->getId()) ?>" alt="">
+                            </div>
+                            <div class="section4__products__product__title"><?= $product->getName() ?></div>
+                            <div class="section4__products__product__description"><?= $product->getShortDescription() ?></div>
+                        </a>
+                        <div class="section4__products__product__price_addbag">
+                            <div class="section4__products__product__addbag">
+                                <div class="actions-primary">
+                                    <?php if ($product->isSaleable()):?>
+                                <?php $postParams = $block->getAddToCartPostParams($product); ?>
+                                <form data-role="tocart-form"
+                                      data-product-sku="<?= $escaper->escapeHtml($product->getSku()) ?>"
+                                      action="<?= $escaper->escapeUrl($postParams['action']) ?>"
+                                      method="post">
+                                    <input type="hidden"
+                                           name="product"
+                                           value="<?= /* @noEscape */ $postParams['data']['product'] ?>">
+                                    <input type="hidden"
+                                           name="<?= /* @noEscape */ Action::PARAM_NAME_URL_ENCODED ?>"
+                                           value="<?=
+                                           /* @noEscape */ $postParams['data'][Action::PARAM_NAME_URL_ENCODED]
+                                           ?>">
+                                    <?= $block->getBlockHtml('formkey') ?>
+                                    <button type="submit"
+                                            title="<?= $escaper->escapeHtmlAttr(__('Add to Bag')) ?>"
+                                            class="action tocart primary"
+                                            disabled>
+                                        <span><?= $escaper->escapeHtml(__('Add to Bag')) ?></span>
+                                    </button>
+                                </form>
+                                    <?php else:?>
+                                        <?php if ($product->isAvailable()):?>
+                                            <div class="stock available">
+                                                <span><?= $escaper->escapeHtml(__('In stock')) ?></span></div>
+                                        <?php else:?>
+                                            <div class="stock unavailable">
+                                                <span><?= $escaper->escapeHtml(__('Out of stock')) ?></span></div>
+                                        <?php endif; ?>
+                                    <?php endif; ?>
+                                </div>
+                                - <?= $block->getFormattedPrice($product->getPrice()) ?>
+                            </div>
+                            <?php if( $product->getAttributeText('giveback') ):?>
+                                <div class="section4__products__product__giveback">
+                                    <?= $product->getAttributeText('giveback') ?>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+
+                <script type="text/x-magento-init">
+                {
+                    "[data-role=tocart-form], .form.map.checkout": {
+                        "catalogAddToCart": {
+                            "product_sku": "<?= $escaper->escapeJs($product->getSku()) ?>"
+                        }
+                    }
+                }
+                </script>
+                <?php endforeach; ?>
+            </div>
+        </div>
+    <?php endforeach; ?>
+
+
+</section>
+
+<script type="text/x-magento-init">
+  {
+     "*": {
+         "shopWidgetScript": {
+             "customUrl":"<?= $block->getUrl('shopsectionwidget/ajax/index') ?>"
+         }
+     }
+  }
+</script>

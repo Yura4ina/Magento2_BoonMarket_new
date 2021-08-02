@@ -1,0 +1,41 @@
+//
+//  Common (styles-m.css)
+//  _____________________________________________
+& when (@media-common = true) {
+    .data.table.additional-attributes .col.label{
+        display: none;
+    }
+}
+
+//
+// Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__xl) {
+    .data.table.additional-attributes .section7__img {
+        width: 11.1vw;
+    }
+}
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .data.table.additional-attributes .section7__img {
+        width: 15.1vw;
+    }
+}
+
+//
+//  Mobile
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    .data.table.additional-attributes .section7__img {
+        width: 47%;
+    }
+    .data.table.additional-attributes .section7 h2 {
+        padding: 50px 0px 7px;
+        font-size: 36px;
+    }
+    .data.table.additional-attributes .section7__gallery {
+        width: 1428px;
+        margin: 50px auto 0px;
+    }
+}

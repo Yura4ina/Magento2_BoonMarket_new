@@ -1,0 +1,47 @@
+//
+//  Common (styles-m.css)
+//  _____________________________________________
+& when (@media-common = true) {
+
+    .sections.nav-sections {
+        margin: 0;
+    }
+
+    .sections.nav-sections {
+        background: none;
+
+        .section-items.nav-sections-items {
+            margin-top: 164px;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 41px;
+
+            nav {
+                background: none;
+
+                a {
+                    line-height: 24px;
+                    font-weight: bold;
+                    font-size: 14px;
+                    padding: 0 25px;
+                    color: #2B2B2B;
+                }
+            }
+        }
+    }
+
+    .navigation .level0.active > .level-top, .navigation .level0.has-active > .level-top {
+        border-color: #fdf0d5;
+
+    }
+}
+
+//
+//  Tablet
+//  _____________________________________________
+
+& when (@media-target = 'desktop'), (@media-target = 'all') {
+    @media only screen and (min-width: @screen__m) and (max-width: (@screen__xl - 1)) {
+
+    }
+}

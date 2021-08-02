@@ -1,0 +1,199 @@
+//
+//  Common (styles-m.css)
+//  _____________________________________________
+
+& when (@media-common = true) {
+
+    .section5 {
+
+        &__content {
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &__img {
+                border-radius: 50%;
+                overflow: hidden;
+            }
+
+            &__info {
+
+                &__tag {
+                    display: inline-block;
+                    background: #FBDCC5;
+                    border-radius: 3px;
+                    letter-spacing: 2px;
+                    text-transform: uppercase;
+                }
+
+                &__title {
+                    font-weight: bold;
+                }
+
+                &__description {
+                    color: #747474;
+                }
+
+                &__shop_now {
+                    letter-spacing: 2px;
+                    text-transform: uppercase;
+                }
+            }
+        }
+
+        .second {
+            background: #F7F5F2;
+        }
+
+        a.section5__content__info__shop_now {
+            color: #DE470D;
+            transition: color .3s;
+
+            &:hover {
+                text-decoration: none;
+                transition: color .3s;
+                color: #f1c102;
+            }
+        }
+    }
+}
+
+//
+//  Tablet
+//  _____________________________________________
+& when (@media-target = 'desktop'), (@media-target = 'all') {
+    @media only screen and (min-width: @screen__m) and (max-width: (@screen__xl - 1)) {
+
+        .section5__content {
+            width: 100%;
+        }
+        .section5__content {
+            padding: 60px 50px;
+            box-sizing: border-box;
+        }
+        .section5__content__info {
+            width: 400px;
+            padding: 0 50px 0 50px;
+        }
+        .section5__content__img {
+            max-width: 270px;
+        }
+        .section5 .second .section5__content__info {
+            padding: 0 50px 0 30px;
+        }
+    }
+}
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .section5 {
+
+        h2 {
+            margin-bottom: 34px;
+        }
+
+        &__content {
+            padding: 60px 0;
+            width: 960px;
+
+            &__info {
+                width: 480px;
+                padding: 0 86px 0 90px;
+
+                &__tag {
+                    font-size: 12px;
+                    line-height: 18px;
+                    padding: 5px 8px 3px 8px;
+                    margin-bottom: 14px;
+                }
+
+                &__title {
+                    font-size: 30px;
+                    line-height: 30px;
+                    margin-bottom: 14px;
+                }
+
+                &__description {
+                    font-size: 14px;
+                    line-height: 24px;
+                    margin-bottom: 31px;
+                }
+
+                &__shop_now {
+                    font-size: 12px;
+                    line-height: 18px;
+                }
+            }
+        }
+
+        .second {
+            .section5__content__info {
+                padding: 0 70px 0 30px;
+            }
+        }
+    }
+}
+
+//
+//  Mobile (styles-m.css)
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+
+    .section5 {
+
+        h2 {
+            margin-bottom: 34px;
+        }
+
+        &__content {
+            padding: 40px 0;
+            width: 100%;
+            flex-direction: column;
+
+            .section5__content__img{
+                width: 60%;
+            }
+
+            &__info {
+                width: 100%;
+                padding: 30px 20px 0;
+                box-sizing: border-box;
+                text-align: center;
+
+                &__tag {
+                    font-size: 12px;
+                    line-height: 18px;
+                    padding: 5px 8px 3px 8px;
+                    margin-bottom: 14px;
+                }
+
+                &__title {
+                    font-size: 24px;
+                    line-height: 28px;
+                    margin-bottom: 14px;
+                }
+
+                &__description {
+                    font-size: 14px;
+                    line-height: 24px;
+                    margin-bottom: 31px;
+                }
+
+                &__shop_now {
+                    font-size: 12px;
+                    line-height: 18px;
+                }
+            }
+        }
+
+        .second {
+            .section5__content{
+                flex-direction: column-reverse;
+            }
+            .section5__content__info {
+                padding: 30px 20px 0;
+            }
+        }
+    }
+
+}

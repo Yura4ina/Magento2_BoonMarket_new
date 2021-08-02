@@ -1,0 +1,87 @@
+//
+//  Common (styles-m.css)
+//  _____________________________________________
+
+& when (@media-common = true) {
+
+    .section7 {
+        background: #F7F5F2;
+
+        h2 {
+            margin: 0;
+            padding: 87px 0 7px;
+        }
+
+        &__img {
+            margin: 0 10px 19px;
+            width: 262px;
+        }
+
+        &__gallery {
+            width: 1428px;
+            margin: 100px auto 0;
+            padding-bottom: 71px;
+        }
+    }
+}
+
+//
+//  Tablet
+//  _____________________________________________
+
+& when (@media-target = 'desktop'), (@media-target = 'all') {
+    @media only screen and (min-width: @screen__m) and (max-width: (@screen__xl - 1)) {
+
+        .section5__content {
+            width: 100%;
+        }
+        .section5__content {
+            padding: 60px 50px;
+            box-sizing: border-box;
+        }
+        .section5__content__info {
+            width: 400px;
+            padding: 0 50px 0 50px;
+        }
+        .section5__content__img {
+            max-width: 270px;
+        }
+        .section5 .second .section5__content__info {
+            padding: 0 50px 0 30px;
+        }
+    }
+}
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
+    .section7__img {
+        width: 17.7vw;
+    }
+}
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .section7__img {
+        width: 16.7vw;
+    }
+    .section7__gallery {
+        margin: 50px auto 0;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+//
+//  Mobile (styles-m.css)
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    .section7__gallery {
+        padding-bottom: 71px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        max-width: 100%;
+    }
+    .section7__img {
+        max-width: 43%;
+    }
+}

@@ -1,0 +1,212 @@
+//
+//  Common (styles-m.css)
+//  _____________________________________________
+& when (@media-common = true) {
+
+    .section2{
+        position: relative;
+
+        &__content{
+            color: #FFFFFF;
+            width: 1100px;
+            background: #708D92;
+            box-sizing: border-box;
+
+            &__fz24{
+                letter-spacing: 0.5px;
+            }
+            &__fz12{
+                font-weight: normal;
+            }
+            &__coll1{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+            }
+            &__coll2{
+                &__fz12{
+                    text-transform: uppercase;
+                    color: #FBDCC5;
+                }
+            }
+            &__coll3{
+                &__top{
+                    text-transform: uppercase;
+                    color: #FBDCC5;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-bottom: 1px solid #FFFFFF;
+                }
+                &__bottom{
+                    text-transform: uppercase;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+        &__table{
+            border: 1px solid #FFFFFF;
+            box-sizing: border-box;
+            display: flex;
+            text-align: center;
+        }
+    }
+}
+
+//
+//  Tablet
+//  _____________________________________________
+
+& when (@media-target = 'desktop'), (@media-target = 'all') {
+    @media only screen and (min-width: @screen__m) and (max-width: (@screen__l + 100)) {
+
+        .section2 {
+
+            &__content {
+                width: 100%;
+            }
+        }
+        .section2__content__coll1 {
+            padding: 30px 30px 30px;
+        }
+        .section2__content__fz45 {
+            font-size: 32px;
+            line-height: 60px;
+        }
+        .section2__content__coll2 {
+            width: 30.5%;
+            padding: 40px 25px;
+        }
+        .section2__content__coll1 {
+            width: 31.333333%;
+        }
+    }
+}
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .section2{
+        height: 0;
+
+        &__content{
+            position: absolute;
+            top: -20px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            height: 210px;
+            padding: 20px;
+
+            &__fz45{
+                font-size: 45px;
+                line-height: 67px;
+            }
+            &__fz24{
+                font-size: 24px;
+                line-height: 34px;
+            }
+            &__fz12{
+                font-size: 12px;
+                line-height: 18px;
+            }
+            &__coll1{
+                width: 21.333333%;
+                border-right: 1px solid #FFFFFF ;
+                padding: 35px 75px 30px;
+
+                &__fz12{
+                    line-height: 22px;
+                }
+            }
+            &__coll2{
+                width: 30.3333333333333%;
+                border-right: 1px solid #FFFFFF ;
+                padding: 41px 37px 42px 37px;
+            }
+            &__coll3{
+                width: 33.3333333333333%;
+
+                &__top{
+                    height: 83.5px;
+                }
+                &__bottom{
+                    height: 83.5px;
+                }
+            }
+        }
+    }
+}
+
+//
+//  Mobile (styles-m.css)
+//  _____________________________________________
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+
+    .section2{
+        height: initial;
+
+        &__content{
+            max-width: 100%;
+            position: relative;
+            margin: auto;
+            height: auto;
+            padding: 20px;
+
+            &__fz45{
+                font-size: 38px;
+                line-height: 58px;
+            }
+            &__fz24{
+                font-size: 24px;
+                line-height: 34px;
+            }
+            &__fz12{
+                font-size: 12px;
+                line-height: 18px;
+            }
+            &__coll1{
+                width: 100%;
+                border-right: 0 solid #FFFFFF ;
+                border-bottom: 1px solid #FFFFFF ;
+                padding: 35px 75px 30px;
+
+                &__fz12{
+                    line-height: 22px;
+                }
+            }
+            &__coll2{
+                width: 100%;
+                border-bottom: 1px solid #FFFFFF ;
+                border-right: 0 solid #FFFFFF ;
+                padding: 41px 37px 42px 37px;
+            }
+            &__coll3{
+                width: 100%;
+
+                &__top{
+                    height: 83.5px;
+                }
+                &__bottom{
+                    height: 83.5px;
+                }
+            }
+        }
+        &__table{
+            flex-wrap: wrap;
+        }
+    }
+}
+
+
+& when (@media-target = 'mobile'), (@media-target = 'all') {
+    @media only screen and (max-width: 390px) {
+        .section2__content__coll1 {
+            padding: 35px 35px 30px;
+        }
+        .section2__content__coll2 {
+            padding: 41px 15px 42px 15px;
+        }
+    }
+}

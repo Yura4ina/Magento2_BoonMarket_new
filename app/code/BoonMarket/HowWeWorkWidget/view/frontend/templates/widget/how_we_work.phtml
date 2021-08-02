@@ -1,0 +1,29 @@
+<?php
+/**
+ * @var $block BoonMarket\HowWeWorkWidget\Block\Widget\HowWeWorkBlock
+ */
+?>
+
+<section class="section3">
+    <div class="section3__container" id="about">
+        <div class="section3__sm_title"><?= $block->getSmTitle() ?></div>
+        <h2><?= $block->getTitle() ?></h2>
+        <div class="section3__items">
+            <div class="section3__items__item">
+                <img src="<?= $block->getItem1image() ?>" alt="" class="section3__items__item__img">
+                <div class="section3__items__item__title"><?= $block->getItem1Title() ?></div>
+                <div class="section3__items__item__description"><?= $block->getItem1Description() ?></div>
+            </div>
+            <div class="section3__items__item">
+                <img src="<?= $block->getItem2image() ?>" alt="" class="section3__items__item__img">
+                <div class="section3__items__item__title"><?= $block->getItem2Title() ?></div>
+                <div class="section3__items__item__description"><?= $block->getItem2Description() ?></div>
+            </div>
+            <div class="section3__items__item">
+                <img src="<?= $block->getItem3image() ?>" alt="" class="section3__items__item__img">
+                <div class="section3__items__item__title"><?= $block->getItem3Title() ?></div>
+                <div class="section3__items__item__description"><?= $block->getItem3Description() ?></div>
+            </div>
+        </div>
+    </div>
+</section>

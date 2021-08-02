@@ -1,0 +1,207 @@
+//
+//  Common (styles-m.css)
+//  _____________________________________________
+
+& when (@media-common = true) {
+
+    .section6 {
+        background: #F7F5F2;
+
+        &__slider {
+            margin: auto;
+
+            .swiper-pagination {
+                position: absolute;
+                left: 0;
+                right: 0;
+                margin: auto;
+                display: flex;
+                justify-content: center;
+            }
+
+            .swiper-pagination-bullet {
+                background: rgba(52, 52, 52, 0.2);
+                cursor: pointer;
+            }
+
+            .swiper-pagination-bullet.swiper-pagination-bullet-active {
+                background: #343434;
+            }
+
+            &__slide {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+
+                &__title {
+                    font-weight: bold;
+                }
+
+                &__description {
+                    color: #747474;
+                }
+
+                &__slide__read {
+                    text-transform: uppercase;
+                }
+            }
+        }
+
+        a.section6__slider__slide__read {
+            color: #DE470D;
+            transition: color .3s;
+
+            &:hover {
+                text-decoration: none;
+                transition: color .3s;
+                color: #f1c102;
+            }
+        }
+    }
+}
+
+//
+//  Tablet
+//  _____________________________________________
+
+& when (@media-target = 'desktop'), (@media-target = 'all') {
+    @media only screen and (min-width: @screen__m) and (max-width: (@screen__l + 100)) {
+        .section6 {
+
+            &__slider {
+                width: 100%;
+            }
+        }
+        .section6__slider__slide__img {
+            max-width: 360px;
+            margin-right: 40px;
+        }
+
+    }
+}
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
+
+    .section6 {
+        padding: 155px 0 0px;
+
+        &__slider {
+            width: 1110px;
+        }
+    }
+}
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+
+    .swiper-container.section6__slider{
+        padding: 0 0 96px;
+    }
+    .section6 {
+        padding: 80px 0 0;
+
+        &__slider {
+            width: 1110px;
+
+            .swiper-pagination {
+                bottom: 43px;
+            }
+
+            .swiper-pagination-bullet {
+                width: 9px;
+                height: 9px;
+                margin: 0 6px;
+            }
+
+            &__slide {
+
+                &__img {
+                    max-width: 555px;
+                    margin-right: 88px;
+                }
+
+                &__info {
+                    width: 353px;
+                }
+
+                &__title {
+                    font-size: 30px;
+                    line-height: 43px;
+                    margin-bottom: 9px;
+                }
+
+                &__description {
+                    font-size: 14px;
+                    line-height: 24px;
+                    margin-bottom: 36px;
+                }
+
+                &__slide__read {
+                    font-size: 12px;
+                    line-height: 14px;
+                    letter-spacing: 1.5px;
+                }
+            }
+        }
+    }
+}
+
+//
+//  Mobile (styles-m.css)
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+
+    .swiper-container.section6__slider{
+        padding: 0 0 96px;
+    }
+    .section6 {
+        padding: 80px 0 0;
+
+        &__slider {
+            width: 100%;
+
+            .swiper-pagination {
+                bottom: 43px;
+            }
+
+            .swiper-pagination-bullet {
+                width: 9px;
+                height: 9px;
+                margin: 0 6px;
+            }
+
+            &__slide {
+                flex-direction: column;
+
+                &__img {
+                    max-width: 90%;
+                    margin-right: 0px;
+                }
+
+                &__info {
+                    padding-top: 30px;
+                    text-align: center;
+                    width: 90%;
+                    margin-right: 0;
+                }
+
+                &__title {
+                    font-size: 24px;
+                    line-height: 38px;
+                    margin-bottom: 9px;
+                }
+
+                &__description {
+                    font-size: 14px;
+                    line-height: 24px;
+                    margin-bottom: 36px;
+                }
+
+                &__slide__read {
+                    font-size: 12px;
+                    line-height: 14px;
+                    letter-spacing: 1.5px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <customfieldsmodule>
+            <general>
+                <shop_link_title>Shop</shop_link_title>
+                <shop_link_url>#Shop</shop_link_url>
+                <boon_life_link_title>The Boon Life</boon_life_link_title>
+                <boon_life_link_url>#Boon_Life</boon_life_link_url>
+            </general>
+        </customfieldsmodule>
+    </default>
+</config>

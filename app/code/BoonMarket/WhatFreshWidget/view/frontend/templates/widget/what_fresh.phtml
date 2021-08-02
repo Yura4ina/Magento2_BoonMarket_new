@@ -1,0 +1,42 @@
+<?php
+/**
+ * @var $block BoonMarket\WhatFreshWidget\Block\Widget\WhatFreshBlock
+ */
+?>
+
+<section class="section5" id="boon-life">
+    <div class="section5__container first">
+        <h2><?= $block->getSectionTitle() ?></h2>
+        <div class="section5__content">
+            <img src="<?= $block->getBigImageFirst() ?>" alt="" class="section5__content__img">
+            <div class="section5__content__info">
+                <div class="section5__content__info__tag"><?= $block->getTagFirst() ?></div>
+                <div class="section5__content__info__title"><?= $block->getTitleFirst() ?></div>
+                <div class="section5__content__info__description"><?= $block->getDescriptionFirst() ?></div>
+                <a href="<?= $block->getBaseUrl() . 'shop-page' ?>" class="section5__content__info__shop_now"><?= $block->getButtonShopNowTextFirst() ?></a>
+            </div>
+        </div>
+    </div>
+    <div class="section5__container second">
+        <div class="section5__content">
+            <div class="section5__content__info">
+                <div class="section5__content__info__tag"><?= $block->getTagSecond() ?></div>
+                <div class="section5__content__info__title"><?= $block->getTitleSecond() ?></div>
+                <div class="section5__content__info__description"><?= $block->getDescriptionSecond() ?></div>
+                <a href="<?= $block->getBaseUrl() . 'shop-page' ?>" class="section5__content__info__shop_now"><?= $block->getButtonShopNowTextSecond() ?></a>
+            </div>
+            <img src="<?= $block->getBigImageSecond() ?>" alt="" class="section5__content__img">
+        </div>
+    </div>
+    <div class="section5__container third">
+        <div class="section5__content">
+            <img src="<?= $block->getBigImageThird() ?>" alt="" class="section5__content__img">
+            <div class="section5__content__info">
+                <div class="section5__content__info__tag"><?= $block->getTagThird() ?></div>
+                <div class="section5__content__info__title"><?= $block->getTitleThird() ?></div>
+                <div class="section5__content__info__description"><?= $block->getDescriptionThird() ?></div>
+                <a href="<?= $block->getBaseUrl() . 'shop-page' ?>" class="section5__content__info__shop_now"><?= $block->getButtonShopNowTextThird() ?></a>
+            </div>
+        </div>
+    </div>
+</section>

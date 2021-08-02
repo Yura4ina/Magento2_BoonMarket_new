@@ -1,0 +1,90 @@
+//
+//  Common (styles-m.css)
+//  _____________________________________________
+
+& when (@media-common = true) {
+    .page-products .products-grid .product-items .product-item {
+        position: relative;
+    }
+    .page-products .product-item-info {
+        position: initial;
+    }
+    .product-item .product-item-details{
+        visibility: visible;
+        position: initial;
+    }
+    .products-grid .product-items .product-item .product-item-details .product-item-inner{
+        position: absolute;
+        clip: initial;
+        top: 195px;
+        background: none;
+        overflow: visible;
+        width: 100%;
+        box-shadow: none;
+        box-sizing: border-box;
+        padding: 0;
+        height: 49px;
+        outline: 0;
+        margin-top: 3px;
+        border: 0;
+    }
+    .products-grid .product-item-info:hover, .products-grid .product-item-info.active{
+        position: initial;
+    }
+    .products-grid .product-items .product-item .product-item-details .product-item-inner:before {
+        display: none;
+    }
+    .page-products .product-item-actions {
+        position: relative;
+        display: flex;
+        flex-direction: row-reverse;
+        width: 100%;
+        justify-content: space-between;
+        padding: 0 7px;
+        box-sizing: border-box;
+        left: 0;
+        max-width: 214px;
+        right: 0;
+        z-index: 999;
+        margin: 0 auto;
+    }
+    .page-products .actions-primary form .action.tocart.primary{
+        border: 0px solid #666666;
+        color: #666666;
+        margin-top: 4px;
+        font-size: 25px;
+        padding: 8px 8px 10px ;
+        height: 30px;
+        width: 30px;
+        line-height: 10px;
+        background: none;
+        position: relative;
+        background: #FFFFFF;
+    }
+    .page-products .actions-primary form .action.tocart.primary:before{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        left: 4px;
+        right: 0;
+        top: 4px;
+        bottom: 0;
+        line-height: 14px;
+        border-radius: 50%;
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border: 1px solid #0a0a0a;
+        content: '+';
+    }
+    .page-products .actions-primary form .action.tocart.primary span{
+        font-size: 24px;
+        display: none;
+    }
+    .page-products .product-item-info .product-item-actions .actions-secondary a:before{
+        fill: #FFF;
+        color: #fff;
+        background: #000;
+        padding: 8px;
+    }
+}

@@ -1,0 +1,58 @@
+<?php
+use Magento\Framework\View\Element\Template;
+
+/** @var Template $block */
+?>
+
+<div class="my-footer" >
+
+    <div class="my-footer__left">
+        <div class="my-footer__left__infobl">
+            <div class="my-footer__left__infobl__top">
+                <div class="my-footer__left__infobl__top__left">
+                    <img src="<?= $this->getViewFileUrl('images/footerlogo.svg'); ?>" class="footerlogo" alt="">
+                </div>
+                <div class="my-footer__left__infobl__top__right">
+                    boon (def.)
+                </div>
+            </div>
+            <div class="my-footer__left__infobl__bottom">
+                Something very beneficial or helpful
+            </div>
+        </div>
+        <div class="my-footer__left__copyright">Copyright Boon Supply 2021. All Rights Reserved</div>
+    </div>
+    <div class="my-footer__right">
+        <div class="my-footer__right__top">
+            <div class="my-footer__right__list">
+                <div class="my-footer__right__list__title">
+                    Shop
+                </div>
+                <ul>
+                    <li><a href="http://magento2.test/shop-page" class="my-footer__right__list__link">Shop All Items</a></li>
+                    <li><a href="http://magento2.test/shop-page" class="my-footer__right__list__link">Shop Reusable</a></li>
+                    <li><a href="http://magento2.test/shop-page" class="my-footer__right__list__link">Shop Toxin Free</a></li>
+                </ul>
+            </div>
+            <div class="my-footer__right__list">
+                <div class="my-footer__right__list__title">
+                    About
+                </div>
+                <ul>
+                    <li><a href="http://magento2.test/#about" class="my-footer__right__list__link">About Boon Market</a></li>
+                    <li><a href="http://magento2.test/#boon-life" class="my-footer__right__list__link">The Boon Life</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="my-footer__right__list">
+            <div class="my-footer__right__list__title">
+                Support
+            </div>
+            <ul>
+                <li><a href="<?= $block->getBaseUrl() . 'contact' ?>" class="my-footer__right__list__link">Contact Us</a></li>
+                <li><a href="<?= $block->getBaseUrl() . 'terms-of-service' ?>" class="my-footer__right__list__link">Terms of Service</a></li>
+                <li><a href="<?= $block->getBaseUrl() . 'privacy-policy-cookie-restriction-mode' ?>" class="my-footer__right__list__link">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </div>
+</div>

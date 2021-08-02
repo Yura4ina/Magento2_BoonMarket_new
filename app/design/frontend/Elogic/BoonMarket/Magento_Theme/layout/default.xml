@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyri
+        <referenceBlock name="top.search" remove="true"/>ght © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="header.container" >
+            <container name="top_img_container" htmlTag="div" htmlClass="top_img_bg_wr" before="header_logo_links_wrapper">
+                <block name="top_img_bg" template="Magento_Theme::top_img_bg.phtml" before="-"/>
+            </container>
+            <container  name="header_logo_links_wrapper" htmlTag="div" htmlClass="header_logo_links_wrapper">
+                <container  name="header_logo_links_wrapper_container" htmlTag="div" htmlClass="header_logo_links_wrapper_container">
+                    <block class="BoonMarket\CustomFieldsModule\Block\CustomDataProvider" template="Magento_Theme::header_links_logo.phtml" name="header_logo_links"/>
+                </container>
+            </container>
+        </referenceContainer>
+        <referenceContainer name="footer">
+            <block class="Magento\Store\Block\Switcher" name="store_switcher" as="store_switcher" after="footer_links" template="Magento_Store::switch/stores.phtml"/>
+        </referenceContainer>
+        <referenceContainer name="footer">
+            <container name="email_form_container" htmlTag="div" htmlClass="email_form_container" before="footer.content">
+                <block  template="Magento_Theme::email_form.phtml" name="email_form_info" />
+            </container>
+            <block class="Magento\Framework\View\Element\Template" template="Magento_Theme::footer.phtml" name="footer.content"/>
+        </referenceContainer>
+        <referenceBlock name="logo">
+            <arguments>
+                <argument name="logo_width" xsi:type="number">150</argument>
+                <argument name="logo_height" xsi:type="number">107</argument>
+                <argument name="logo_alt" xsi:type="string">Logo</argument>
+            </arguments>
+        </referenceBlock>
+
+
+        <move element="messages" destination="after.body.start" before="-" />
+        <move element="copyright" destination="footer.content"/>
+        <move element="logo" destination="header_logo_links_wrapper" after="header_logo_links_wrapper_container"/>
+
+
+        <referenceBlock name="global_notices"  remove="false"/>
+        <referenceBlock name="page.main.title"  remove="true"/>
+        <referenceContainer name="header-wrapper"  remove="true"/>
+        <referenceBlock name="skip_to_content"  remove="true"/>
+        <referenceBlock name="top.search" remove="true"/>
+        <referenceContainer name="header.container" >
+            <referenceBlock name="minicart" remove="true" />
+        </referenceContainer>
+        <!-- remove default footer links -->
+        <referenceBlock name="footer_links" remove="true" />
+        <!-- remove newsletter subscribe -->
+
+        <!-- <referenceBlock name="form.subscribe" remove="true" />-->
+        <referenceBlock name="report.bugs" remove="true"/>
+    </body>
+</page>

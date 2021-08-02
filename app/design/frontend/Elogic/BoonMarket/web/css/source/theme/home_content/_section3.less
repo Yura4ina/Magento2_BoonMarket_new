@@ -1,0 +1,176 @@
+//
+//  Common (styles-m.css)
+//  _____________________________________________
+
+& when (@media-common = true) {
+
+    .section3 {
+        max-width: 1280px;
+        text-align: center;
+
+        &__sm_title {
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #747474;
+        }
+
+        h2 {
+            padding-top: 0;
+            color: @main-color;
+        }
+
+        &__items {
+            display: flex;
+            justify-content: space-around;
+
+            &__item {
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                &__img {
+                    max-width: 200px;
+                }
+
+                &__title {
+                    font-weight: bold;
+                    text-align: center;
+                    color: @main-color;
+                    position: relative;
+
+                    &:before {
+                        position: absolute;
+                        content: '*';
+                        color: #DE470D;
+                    }
+                }
+
+                &__description {
+                    margin: auto;
+                    font-weight: normal;
+                    text-align: center;
+                    color: #747474;
+                }
+            }
+        }
+    }
+}
+
+//
+//  Tablet
+//  _____________________________________________
+
+& when (@media-target = 'desktop'), (@media-target = 'all') {
+    @media only screen and (min-width: @screen__m) and (max-width: (@screen__xl - 1)) {
+
+        .section3__items__item {
+            padding: 0 20px;
+        }
+    }
+}
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+
+    .section3 {
+        margin: 0px auto 65px;
+        padding-top: 198px;
+
+        &__sm_title {
+            margin-bottom: 18px;
+            font-size: 12px;
+            line-height: 18px;
+        }
+
+        h2 {
+            margin-bottom: 62px;
+        }
+
+        &__items {
+
+            &__item {
+                width: 325px;
+
+                &__img {
+                    min-height: 197px;
+                }
+
+                &__title {
+                    margin: 13px 0 14px;
+                    font-size: 24px;
+                    line-height: 30px;
+                    padding-left: 20px;
+
+                    &:before {
+                        font-size: 24px;
+                        line-height: 30px;
+                        left: 2px;
+                        top: 0;
+                    }
+                }
+
+                &__description {
+                    max-width: 258px;
+                    font-weight: normal;
+                    font-size: 12px;
+                    line-height: 22px;
+                }
+            }
+        }
+    }
+}
+
+//
+//  Mobile (styles-m.css)
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+
+    .section3 {
+        margin: 0px auto 65px;
+        padding-top: 120px;
+
+        &__sm_title {
+            margin-bottom: 18px;
+            font-size: 12px;
+            line-height: 18px;
+        }
+
+        h2 {
+            margin-bottom: 62px;
+        }
+
+        &__items {
+            flex-wrap: wrap;
+
+            &__item {
+                width: 325px;
+                margin-bottom: 40px;
+
+                &__img {
+                    min-height: 197px;
+                }
+
+                &__title {
+                    margin: 13px 0 14px;
+                    font-size: 24px;
+                    line-height: 30px;
+                    padding-left: 20px;
+
+                    &:before {
+                        font-size: 24px;
+                        line-height: 30px;
+                        left: 2px;
+                        top: 0;
+                    }
+                }
+
+                &__description {
+                    max-width: 258px;
+                    font-weight: normal;
+                    font-size: 12px;
+                    line-height: 22px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,153 @@
+//
+//  Common (styles-m.css)
+//  _____________________________________________
+& when (@media-common = true) {
+    .sec1_content{
+        max-width: 600px;
+
+        h1{
+            text-align: center;
+            font-weight: bold;
+            letter-spacing: 1px;
+            color: @main-color;
+            max-width: 553px;
+            margin: 0 0 0 0 ;
+            position: relative;
+
+            &:after{
+                position: relative;
+                content: '*';
+                bottom: 0;
+                letter-spacing: 1px;
+                color: #DE470D;
+            }
+        }
+        .shop_now{
+            background: #FABAA0;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            text-align: center;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: @main-color;
+        }
+    }
+}
+
+//
+//  Desktop
+//  _____________________________________________
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__xl) {
+    .sec1_content {
+        h1 {
+            font-size: 80px;
+            line-height: 90px;
+
+            &:after {
+                font-size: 80px;
+                line-height: 90px;
+                right: -15px;
+            }
+        }
+    }
+}
+
+//
+//  Tablet
+//  _____________________________________________
+& when (@media-target = 'desktop'), (@media-target = 'all') {
+    @media only screen and (min-width: @screen__m) and (max-width: (@screen__xl - 1)) {
+        .sec1_content {
+            max-width: fit-content;
+            margin: 0 auto 178px;
+        }
+        .sec1_content h1:after {
+            right: -15px;
+            bottom: 10px;
+            font-size: 52px;
+        }
+    }
+}
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
+    .sec1_content h1 {
+        font-size: 62px;
+        line-height: 70px;
+        margin: 10px 0 10px 0;
+    }
+}
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .sec1_content {
+        max-width: 600px;
+        margin: 0 auto 273px;
+
+        h1 {
+            font-size: 41px;
+            line-height: 62px;
+            margin: 10px 0 10px 0;
+            max-width: initial;
+
+            &:after {
+                font-size: 41px;
+                line-height: 62px;
+                right: -30px;
+            }
+        }
+        .shop_now{
+            margin: 40px auto 0;
+            height: 58px;
+            width: 240px;
+            font-size: 14px;
+            line-height: 24px;
+        }
+    }
+}
+
+//
+//  Mobile (styles-m.css)
+//  _____________________________________________
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+
+    .sec1_content {
+        margin: 0 auto 50px;
+
+        h1 {
+            font-size: 28px;
+            line-height: 30px;
+
+            &:after {
+                font-size: 32px;
+                line-height: 40px;
+                right: -7px;
+            }
+        }
+        .shop_now{
+            margin: 25px auto 0;
+            height: 35px;
+            width: 160px;
+            font-size: 12px;
+            line-height: 22px;
+        }
+
+    }
+}
+
+& when (@media-target = 'mobile'), (@media-target = 'all') {
+    @media only screen and (max-width: 390px) {
+        .sec1_content h1 {
+            font-size: 24px;
+            line-height: 28px;
+        }
+    }
+    @media only screen and (max-width: 360px) {
+        .sec1_content h1 {
+            font-size: 18px;
+            line-height: 24px;
+        }
+    }
+}
+
+
+

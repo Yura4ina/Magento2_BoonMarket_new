@@ -1,0 +1,25 @@
+<?php
+
+use BoonMarket\CustomFieldsModule\Block\CustomDataProvider;
+
+/** @var CustomDataProvider $block */
+?>
+
+<div class="header__links">
+    <a href="<?= $block->getGeneralConfig('shop_link_url') ?>" class="header__links__link">
+        <?= $block->getGeneralConfig('shop_link_title') ?>
+    </a>
+    <a href="<?= $block->getGeneralConfig('boon_life_link_url') ?>" class="header__links__link">
+        <?= $block->getGeneralConfig('boon_life_link_title') ?>
+    </a>
+</div>
+
+<script type="text/x-magento-init">
+  {
+     "*": {
+         "mainScript": {
+             "selector":".header__links__link"
+         }
+     }
+  }
+</script>
