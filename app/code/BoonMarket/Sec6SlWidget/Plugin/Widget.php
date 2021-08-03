@@ -1,18 +1,21 @@
 <?php
 namespace  BoonMarket\Sec6SlWidget\Plugin;
+
+use Magento\Backend\Helper\Data;
+
 class Widget
 {
     /**
-     * @var \Magento\Backend\Helper\Data
+     * @var Data
      */
     protected $backendData;
     /**
      * Widget constructor.
      *
-     * @param \Magento\Backend\Helper\Data $backendData
+     * @param Data $backendData
      */
     public function __construct(
-        \Magento\Backend\Helper\Data $backendData
+        Data $backendData
     ) {
         $this->backendData = $backendData;
     }

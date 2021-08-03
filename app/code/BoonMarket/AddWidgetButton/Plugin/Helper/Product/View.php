@@ -1,7 +1,10 @@
 <?php
 namespace BoonMarket\AddWidgetButton\Plugin\Helper\Product;
 
+use Magento\Catalog\Model\Product;
 use Magento\Cms\Model\Template\FilterProvider;
+use Magento\Framework\DataObject;
+use Magento\Framework\View\Result\Page;
 
 /**
  * Class View
@@ -29,9 +32,9 @@ class View
      *
      * @param \Magento\Catalog\Helper\Product\View $subject
      * @param \Magento\Catalog\Helper\Product\View $result
-     * @param \Magento\Framework\View\Result\Page $resultPage
-     * @param \Magento\Catalog\Model\Product $product
-     * @param null|\Magento\Framework\DataObject $params
+     * @param Page $resultPage
+     * @param Product $product
+     * @param null|DataObject $params
      * @return \[Vendor]\[ModuleName]\Plugin\Helper\Product\View
      * @SuppressWarnings(PHPMD.UnusedFormalParameter)
      */

@@ -1,8 +1,6 @@
 <?php
-/**
- * Created By : Rohan Hapani
- */
 namespace  BoonMarket\WhatFreshWidget\Plugin;
+
 class Widget
 {
     /**
