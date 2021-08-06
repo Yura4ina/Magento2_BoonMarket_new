@@ -122,7 +122,6 @@
         max-width: 214px;
         right: 0;
         box-sizing: border-box;
-        top: 220px;
         margin: auto;
     }
     .cms-shop-page .actions-primary .action.tocart.primary{
@@ -203,12 +202,37 @@
 }
 
 //
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__xl) {
+
+    .cms-shop-page .product-item-actions {
+        top: 210px;
+    }
+}
+
+//
 //  Tablet
 //  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
+    .abs-margin-for-blocks-and-widgets-desktop, .page-main .block, .customer-review .product-details {
+        margin-bottom: 0;
+    }
+
+    .cms-shop-page .product-item-actions {
+        top: 160px;
+    }
+}
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
     .abs-margin-for-blocks-and-widgets-desktop, .page-main .block, .customer-review .product-details {
         margin-bottom: 0;
+    }
+
+    .cms-shop-page .product-item-actions {
+        top: 150px;
     }
 }
 
@@ -216,17 +240,29 @@
 //  Mobile (styles-m.css)
 //  _____________________________________________
 
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+
+    .cms-shop-page .product-item-actions {
+        top: 170px;
+    }
+}
 & when (@media-target = 'mobile'), (@media-target = 'all') {
     @media only screen and (max-width: 390px) {
         h2 {
             padding-top: 60px;
             font-size: 36px;
         }
+        .cms-shop-page .product-item-actions {
+            top: 145px;
+        }
     }
     @media only screen and (max-width: 340px) {
         h2 {
             padding-top: 40px;
             font-size: 30px;
+        }
+        .cms-shop-page .product-item-actions {
+            top: 135px;
         }
     }
 }

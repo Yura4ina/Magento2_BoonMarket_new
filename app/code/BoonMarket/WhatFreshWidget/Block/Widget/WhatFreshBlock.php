@@ -1,4 +1,5 @@
 <?php
+
 namespace BoonMarket\WhatFreshWidget\Block\Widget;
 
 use Magento\Framework\Exception\NoSuchEntityException;

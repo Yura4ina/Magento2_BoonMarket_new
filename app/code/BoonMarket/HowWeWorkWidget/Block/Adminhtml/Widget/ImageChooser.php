@@ -1,6 +1,5 @@
 <?php
 
-
 namespace BoonMarket\HowWeWorkWidget\Block\Adminhtml\Widget;
 
 use Magento\Backend\Block\Template\Context;
