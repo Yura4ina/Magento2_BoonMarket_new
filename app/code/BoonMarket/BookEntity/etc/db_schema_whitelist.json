@@ -1,0 +1,18 @@
+{
+  "el_book_entity": {
+    "column": {
+      "book_entity_id": true,
+      "title": true,
+      "description": true,
+      "author": true,
+      "banner": true,
+      "price": true
+    },
+    "index": {
+      "EL_BOOK_ENTITY_BOOK_ENTITY_ID": true
+    },
+    "constraint": {
+      "PRIMARY": true
+    }
+  }
+}

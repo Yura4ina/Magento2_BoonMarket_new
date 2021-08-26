@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="el_book_entity" resource="default" engine="innodb" comment="BookEntity">
+        <column xsi:type="int" name="book_entity_id" padding="10" unsigned="true" nullable="false" identity="true"
+                comment="Book Entity Id Column"/>
+        <column xsi:type="varchar" name="title" nullable="false" length="255" comment="Title Column"/>
+        <column xsi:type="varchar" name="description" nullable="false" length="255" comment="Description Column"/>
+        <column xsi:type="varchar" name="author" nullable="false" length="255" comment="Author Column"/>
+        <column xsi:type="varchar" name="banner" nullable="true" length="1255" comment="Banner Column"/>
+        <column xsi:type="decimal" name="price" precision="20" scale="2" unsigned="true" nullable="false"
+                comment="Price Column"/>
+        <column xsi:type="varchar" name="publish_date" nullable="false" length="255" comment="Publish Date"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="book_entity_id"/>
+        </constraint>
+        <index referenceId="EL_BOOK_ENTITY_BOOK_ENTITY_ID" indexType="btree">
+            <column name="book_entity_id"/>
+        </index>
+    </table>
+</schema>
