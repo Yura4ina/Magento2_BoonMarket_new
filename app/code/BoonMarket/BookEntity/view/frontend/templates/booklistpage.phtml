@@ -1,0 +1,114 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+/**
+ * @var $block BoonMarket\BookEntity\Block\BookListPage
+ * @var Magento\Framework\Escaper $escaper
+ */
+
+$bookList = $block->getBookCollection();
+?>
+
+<div class="breadcrumbs">
+    <ul class="items">
+        <li class="item home">
+            <a href="http://magento2.test/" title="Go to Home Page">
+                Home                </a>
+        </li>
+        <li class="item cms_page">
+            <strong>Books catalog</strong>
+        </li>
+    </ul>
+</div>
+<main id="maincontent" class="page-main">
+    <div class="columns">
+        <div class="column main">
+            <div class="block widget block-new-products grid">
+                <div class="block-title">
+                    <strong role="heading" aria-level="2">Book list</strong>
+                </div>
+            </div>
+            <div class="block-content">
+                <div class="products-grid grid">
+                    <ol class="product-items widget-new-grid">
+                        <?php
+                        foreach ($bookList as  $bookEntity):
+                         ?>
+                            <li class="product-item">
+                                <div class="product-item-info">
+                                    <a href="<?= $block->getDetailsUrl($bookEntity); ?>" class="product-item-photo">
+                                    <span class="product-image-container product-image-container-48" style="width: 240px;">
+                                    <span class="product-image-wrapper" style="padding-bottom: 125%;">
+                                            <img class="product-image-photo" src="<?= $block->getBookBanner($bookEntity); ?>" loading="lazy" width="240" height="300" alt="<?php $bookEntity->getTitle(); ?>"></span>
+                                    </span>
+                                    </a>
+                                    <div class="product-item-details">
+                                        <strong class="product-item-name">
+                                            <a title="Configurable product 1" href="<?= $block->getDetailsUrl($bookEntity); ?>" class="product-item-link">
+                                                <h3><?= $bookEntity->getTitle(); ?></h3>
+                                            </a>
+                                        </strong>
+                                        <div class="price-box price-final_price" data-role="priceBox" data-product-id="48" data-price-box="product-id-48">
+                                            <span class="normal-price">
+                                                <span class="price-container price-final_price tax weee">
+                                                    <span class="price-label"> Price:  </span>
+                                                    <span id="old-price-48-widget-new-grid" data-price-amount="1122" data-price-type="finalPrice" class="price-wrapper "><span class="price"> $<?= $bookEntity->getPrice(); ?>  </span></span>
+                                                </span>
+                                                <br>
+                                                <span class="price-container price-final_price tax weee">
+                                                    <span class="price-label"> Author:  </span>
+                                                    <span id="old-price-48-widget-new-grid" data-price-amount="1122" data-price-type="finalPrice" class="price-wrapper "><span class="price"> <?= $bookEntity->getAuthor(); ?>  </span></span>
+                                                </span>
+                                                <br>
+                                                <span class="price-container price-final_price tax weee">
+                                                    <span class="price-label"> Publish date:  </span>
+                                                    <span id="old-price-48-widget-new-grid" data-price-amount="1122" data-price-type="finalPrice" class="price-wrapper "><span class="price"> <?= $bookEntity->getPublishDate(); ?>  </span></span>
+                                                </span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        <?php
+                        endforeach;
+                        ?>
+                    </ol>
+                </div>
+
+                <div class="pager">
+                    <div class="toolbar-number"> Items 1 to 5 of 10 total </div>
+                    <br>
+                    <div class="pages">
+                        <ul class="items pages-items" aria-labelledby="paging-label" style="padding: 0">
+                            <li class="item current">
+                                <strong class="page">
+                                    <span class="label">You're currently reading page</span>
+                                    <span>1</span>
+                                </strong>
+                            </li>
+                            <li class="item">
+                                <a href="http://magento2.test/shop-page?pephtn=2" class="page">
+                                    <span class="label">Page</span>
+                                    <span>2</span>
+                                </a>
+                            </li>
+
+                            <li class="item pages-item-next">
+                                <a class="action  next" href="http://magento2.test/shop-page?pephtn=2" title="Next">
+                                    <span class="label">Page</span>
+                                    <span>Next</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</main>

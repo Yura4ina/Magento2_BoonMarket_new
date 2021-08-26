@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <route url="/V1/book-entity/get-list" method="GET">
+        <service class="BoonMarket\BookEntity\Api\GetBookEntityListInterface" method="execute"/>
+        <resources>
+            <resource ref="BoonMarket_BookEntity::book_management"/>
+        </resources>
+    </route>
+    <route url="/V1/book-entity/save" method="POST">
+        <service class="BoonMarket\BookEntity\Api\SaveBookEntityInterface" method="execute"/>
+        <resources>
+            <resource ref="BoonMarket_BookEntity::book_management"/>
+        </resources>
+    </route>
+    <route url="/V1/book-entity/:entityId" method="DELETE">
+        <service class="BoonMarket\BookEntity\Api\DeleteBookEntityByIdInterface" method="execute"/>
+        <resources>
+            <resource ref="BoonMarket_BookEntity::book_management"/>
+        </resources>
+    </route>
+</routes>

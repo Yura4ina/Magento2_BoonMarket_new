@@ -167,8 +167,7 @@ class ShopSectionWidget extends Template implements BlockInterface
         } catch (NoSuchEntityException $e) {
             return 'Data not found';
         }
-        $url = $this->imageHelper->init($product, 'product_base_image')->getUrl();
-        return $url;
+        return $this->imageHelper->init($product, 'product_base_image')->getUrl();
     }
 
     /**

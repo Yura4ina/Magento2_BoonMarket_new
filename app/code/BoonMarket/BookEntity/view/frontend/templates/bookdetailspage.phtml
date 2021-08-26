@@ -1,0 +1,75 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+/**
+ * @var $block BoonMarket\BookEntity\Block\BookDetailsPage
+ * @var Magento\Framework\Escaper $escaper
+ */
+
+$currentBook = $block->getCurrentBook();
+?>
+
+<div class="breadcrumbs bookEntity">
+    <ul class="items">
+        <li class="item home">
+            <a href="http://magento2.test/" title="Go to Home Page">
+                Home                </a>
+        </li>
+        <li class="item home">
+            <a href="http://magento2.test/book_list/BookListPage/View" title="Go to Home Page">
+                Books catalog
+            </a>
+        </li>
+        <li class="item cms_page">
+            <strong> <?= $block->getBookTitle($currentBook); ?></strong>
+        </li>
+    </ul>
+</div>
+
+<main id="maincontent" class="page-main">
+    <div class="columns">
+        <div class="column main">
+            <div class="product-info-main">
+                <div class="product-info-price">
+                    <div class="price-box price-final_price" data-role="priceBox" data-product-id="29" data-price-box="product-id-29">
+                        <span class="price-container price-final_price tax weee" itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+                            <span id="product-price-29" data-price-amount="33" data-price-type="finalPrice" class="price-wrapper ">
+                                <span class="price">$<?= $block->getBookPrice($currentBook); ?></span>
+                            </span>
+                        </span>
+
+                    </div>
+                        <div class="product-info-stock-sku">
+                            <div class="stock available" title="Availability">
+                                <b>Publish date: </b>
+                                <span><?= $block->getBookPublishDate($currentBook); ?></span>
+                            </div>
+                            <div class="product attribute sku">
+                                <strong>Author:</strong>
+                                <div class="value" itemprop="sku"><?= $block->getBookAuthor($currentBook); ?></div>
+                            </div>
+                        </div>
+                    </div>
+                    <dl class="items samples">
+                        <dd class="item samples-item">
+                            <?= $block->getBookDescription($currentBook); ?>
+                        </dd>
+                    </dl>
+            </div>
+            <div class="product media">
+                <div class="gallery-placeholder" data-gallery-role="gallery-placeholder" style="">
+                    <div class="fotorama-item fotorama fotorama1628863047004" data-gallery-role="gallery">
+                        <div class="fotorama__wrap fotorama__wrap--css3 fotorama__wrap--slide fotorama__wrap--toggle-arrows fotorama__wrap--no-controls" style="min-width: 0px; max-width: 100%;">
+                            <div class="fotorama__stage__frame bookEntity fotorama__loaded fotorama__loaded--img magnify-wheel-loaded fotorama__loaded--full fotorama_horizontal_ratio fotorama__active" aria-hidden="false" data-active="true" style="left: 0px;">
+                                <img src="<?= $block->getBookBanner($currentBook); ?>" alt="Downloadable1" class="fotorama__img" aria-hidden="false">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
